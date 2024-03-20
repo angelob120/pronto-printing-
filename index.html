@@ -8,22 +8,32 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script>emailjs.init('_zA7U_IZEYf9j3y4J');</script>
+
 </head>
 <body>
-    <div class="bg-green-300 p-8">
-        <div class="container mx-auto">
-          <nav class="flex justify-between items-center py-4">
-            <h1 class="text-2xl font-bold text-gray-800">Pronto Printing</h1>
-            <ul class="flex space-x-4">
-              <li><a href="#" class="text-gray-800 hover:text-gray-600">Home</a></li>
-              <li><a href="#" class="text-gray-800 hover:text-gray-600">Service</a></li>
-              <li><a href="#" class="text-gray-800 hover:text-gray-600">About</a></li>
-              <li><a href="#" class="text-gray-800 hover:text-gray-600">Our Work</a></li>
-              <li><a href="#" class="text-gray-800 hover:text-gray-600">Contact</a></li>
-            </ul>
-          </nav>
+    <nav class="bg-green-300 p-4 sm:p-8">
+      <div class="container mx-auto flex flex-wrap items-center justify-between">
+          <h1 class="text-xl sm:text-2xl font-bold text-green-900 text-white">Pronto Printing</h1>
+          <div class="block sm:hidden">
+              <!-- Mobile menu button -->
+              <button id="mobile-menu-button">
+                  <i class="fas fa-bars"></i>
+              </button>
+          </div>
+          <ul class="hidden w-full sm:flex sm:space-x-4 sm:w-auto" id="mobile-menu">
+              <li><a href="#home" class="text-green-900 hover:text-white">Home</a></li>
+              <li><a href="#service" class="text-green-900 hover:text-white">Service</a></li>
+              <li><a href="#about" class="text-green-900 hover:text-white">About</a></li>
+          </ul>
+          <a href="#contact" class="hidden sm:inline-block text-green-900 border-2 border-green-900 bg-white py-1 px-3 hover:bg-white hover:text-green-300 rounded transition-colors duration-300">
+              Contact
+          </a>
+      </div>
+  </nav>
       
-          <div class="p-8">
+          <div id="home" class="p-8">
             <div class="container mx-auto">
               <!-- ... your nav code ... -->
           
@@ -32,9 +42,11 @@
                 
                 <!-- Text Content -->
                 <div class="text-center md:text-left md:w-1/2">
-                  <h2 class="text-5xl font-bold text-gray-800 mb-8">Unveil Your Unique Style Today!</h2>
-                  <p class="text-lg text-gray-600 mb-10">Explore our Detroit-based service offering a range of custom t-shirt designs.</p>
-                  <button class="bg-green-800 text-white font-bold py-2 px-8 rounded hover:bg-gray-800 focus:outline-none">Get in Touch</button>
+                  <h2 class="text-6xl font-bold text-gray-800 mb-8">Unveil Your Unique Style Today!</h2>
+                  <p class="text-3xl text-gray-600 mb-10">Explore our Detroit-based service offering a range of custom t-shirt designs.</p>
+                  <a href="#contact" class="inline-block bg-green-800 text-white font-bold py-2 px-8 rounded hover:bg-gray-800 focus:outline-none transition duration-300">
+                    Get in Touch
+                  </a>
                 </div>
                 
                 <!-- Image Content -->
@@ -51,7 +63,7 @@
 
 
 
-      <div class="bg-white p-8">
+      <div id="service" class="bg-white p-8">
         <div class="container mx-auto">
           
           <!-- Title and Subtitle -->
@@ -65,13 +77,13 @@
         <!-- Placeholder for T-Shirt Images -->
         <!-- Replace 'path_to_image' with your actual image paths -->
         <div class="w-1/4 max-w-xs">
-          <img src="aerfw.png" alt="T-Shirt Design 1" class="rounded shadow-md">
+          <img src="Group 44.png" alt="T-Shirt Design 1" class="rounded shadow-md">
         </div>
         <div class="w-1/4 max-w-xs">
-          <img src="qerfqerv.png" alt="T-Shirt Design 2" class="rounded shadow-md">
+          <img src="Group 45.png" alt="T-Shirt Design 2" class="rounded shadow-md">
         </div>
         <div class="w-1/4 max-w-xs">
-          <img src="qwerfqer.png" alt="T-Shirt Design 3" class="rounded shadow-md">
+          <img src="Group 47.png" alt="T-Shirt Design 3" class="rounded shadow-md">
         </div>
       </div>
       
@@ -84,6 +96,155 @@
       </div>
         </div>
       </div>
+
+
+      <!-- About Section -->
+<section id="about" class="p-4 sm:p-8">
+  <div class="container mx-auto flex flex-col items-center justify-between space-y-4 sm:space-y-0 sm:flex-row">
+    <!-- Content -->
+    <div class="text-center sm:text-left sm:w-1/2 space-y-6">
+      <h2 class="text-4xl sm:text-5xl font-bold text-gray-800">About US</h2>
+      <h3 class="text-2xl sm:text-3xl text-gray-800 font-semibold">Founded By Anthony, in Detroit MI</h3>
+      <p class="text-lg sm:text-xl text-gray-600">
+        Our journey at Pronto Printing started with a vision that was both straightforward and ambitious: to redefine and elevate the standard in custom t-shirt design and creation. This vision was born from the keen insight and entrepreneurial spirit of our founder, Anthony, a proud Detroit native...
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center sm:justify-start sm:space-x-8">
+        <div class="text-center sm:text-left">
+          <h4 class="text-2xl font-bold text-gray-800">20+</h4>
+          <p class="text-gray-600">Years of Experience</p>
+        </div>
+        <div class="text-center sm:text-left">
+          <h4 class="text-2xl font-bold text-gray-800">500+</h4>
+          <p class="text-gray-600">Clients served</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image -->
+    <div class="sm:w-1/2">
+      <img src="287998324_102raRF20941269587000_2824359777036750016_n 2.png" alt="Anthony" class="rounded-lg shadow-lg w-full">
+    </div>
+  </div>
+</section>
+
+<!-- What We Can Do For You Section -->
+<div class="p-6 sm:p-12">
+  <div class="container mx-auto">
+    <!-- White space wrapper with max width and mx-auto for centering -->
+    <div class="bg-green-200 p-6 sm:p-10 max-w-3xl sm:max-w-6xl mx-auto rounded-lg shadow-lg">
+      <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0">
+        <!-- Left side image -->
+        <div class="sm:flex-1">
+          <img src="324rq aweerf.png" alt="T-Shirt Image" class="rounded-lg shadow-lg">
+        </div>
+        <!-- Right side content -->
+        <div class="sm:flex-1 px-4 sm:px-8 py-6 sm:py-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">What We Can Do For You</h2>
+          <p class="text-sm sm:text-lg text-gray-600 mb-4">
+            Looking for custom shirts at an affordable price? You're in the right place! Get in touch with us today and let's create something special just for you...
+          </p>
+          <a href="#contact" class="inline-block bg-green-800 text-white font-bold py-2 px-4 sm:px-6 rounded hover:bg-gray-900 focus:outline-none transition duration-300">
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    <div id="contact" class="flex items-center justify-center min-h-screen">
+      <div class="p-8 max-w-2xl w-full bg-white rounded-lg border border-gray-300 shadow-lg">
+        <h2 class="mb-8 text-4xl font-bold text-center text-gray-800">Get in Touch</h2>
+        <form id="contact-form" class="space-y-6">
+          <div>
+            <label for="name" class="block mb-2 text-lg font-medium text-gray-900">Name</label>
+            <input type="text" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-green-700 focus:border-green-700 block w-full p-4" placeholder="John Doe" required>
+          </div>
+          <div>
+            <label for="phone" class="block mb-2 text-lg font-medium text-gray-900">Phone</label>
+            <input type="tel" id="phone" class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-green-700 focus:border-green-700 block w-full p-4" placeholder="123-456-7890" required>
+          </div>
+          <div>
+            <label for="email" class="block mb-2 text-lg font-medium text-gray-900">Email</label>
+            <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-green-700 focus:border-green-700 block w-full p-4" placeholder="john.doe@example.com" required>
+          </div>
+          <div>
+            <label for="message" class="block mb-2 text-lg font-medium text-gray-900">Comment or Message</label>
+            <textarea id="message" rows="4" class="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-green-700 focus:border-green-700 block w-full p-4" placeholder="Your message..." required></textarea>
+          </div>
+          <button type="submit" class="w-full text-white bg-green-800 hover:bg-green-900 focus:ring-4 focus:ring-green-500 font-medium rounded-lg text-lg px-5 py-3 text-center">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        
+        // Fetch values from form fields
+        var formData = {
+          name: document.getElementById('name').value,
+          phone: document.getElementById('phone').value,
+          email: document.getElementById('email').value,
+          message: document.getElementById('message').value
+        };
+  
+        // Send the email using EmailJS
+        emailjs.send('service_pzy4uc9', 'template_is0f1uq', formData) // Replace 'YOUR_SERVICE_ID' with 'service_pzy4uc9' and 'YOUR_TEMPLATE_ID' with 'template_is0f1uq'
+          .then(function(response) {
+            console.log('Email sent successfully:', response);
+            // Optionally, display a success message to the user
+            alert('Your message has been sent successfully!');
+            // Clear form fields after successful submission
+            document.getElementById('contact-form').reset();
+          }, function(error) {
+            console.error('Error sending email:', error);
+            // Optionally, display an error message to the user
+            alert('Oops! Something went wrong. Please try again later.');
+          });
+      });
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    
+
+
+
+
+    <footer class="bg-green-200">
+      <div class="container mx-auto py-4 px-4 sm:py-6 sm:px-6">
+        <div class="flex flex-col sm:flex-row justify-between items-center text-center sm:text-left">
+          <!-- Logo and Brand name -->
+          <div class="mb-4 sm:mb-0">
+            <div class="flex justify-center sm:justify-start items-center">
+              <span class="text-2xl sm:text-3xl font-bold text-gray-800 mr-2">P</span>
+              <span class="font-bold text-gray-800">Pronto Printing</span>
+            </div>
+          </div>
+          <!-- Navigation Links -->
+          <div class="flex flex-col sm:flex-row justify-center sm:justify-start items-center mb-4 sm:mb-0 sm:space-x-6">
+            <a href="#home" class="mb-2 sm:mb-0 hover:underline">Home</a>
+            <a href="#service" class="mb-2 sm:mb-0 hover:underline">Service</a>
+            <a href="#about" class="mb-2 sm:mb-0 hover:underline">About</a>
+            <a href="#contact" class="mb-2 sm:mb-0 hover:underline">Contact</a>
+            <a href="#" class="hover:underline">Facebook</a>
+          </div>
+          <!-- Contact Information -->
+          <div class="text-gray-800">
+            <p class="mb-2">Contact:</p>
+            <p class="mb-2">313 - 622 - 7565</p>
+            <p>prontostylez@gmail.com</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+      
       
 </body>
 </html>
